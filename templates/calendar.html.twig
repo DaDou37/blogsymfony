@@ -1,0 +1,12 @@
+<h1>Événements Google Calendar</h1>
+
+<ul>
+  {% for event in events %}
+    <li>
+      <strong>{{ event.summary }}</strong><br>
+      Du {{ event.start }} au {{ event.end }}
+    </li>
+  {% else %}
+    <li>Aucun événement</li>
+  {% endfor %}
+</ul>
