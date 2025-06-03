@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="https://cdn.jsdelivr.net/gh/hpruvot/tarteaucitron@master/tarteaucitron.js"></script>
+        <script type="text/javascript">
+            if(tarteaucitron) {
+                tarteaucitron.init({
+                    "tarteaucitronForceCDN": "https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@master",
+                    "privacyUrl": "", /* Privacy policy url */
+
+                    "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+                    "cookieName": "tartaucitron", /* Cookie name */
+
+                    "orientation": "bottom", /* Banner position (top - bottom) */
+                    "showAlertSmall": false, /* Show the small banner on bottom right */
+                    "cookieslist": true, /* Show the cookie list */
+
+                    "adblocker": false, /* Show a Warning if an adblocker is detected */
+                    "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+                    "highPrivacy": false, /* Disable auto consent */
+                    "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+                    "removeCredit": true, /* Remove credit link */
+                    "moreInfoLink": false, /* Show more info link */
+                    "useExternalCss": false /* If false, the tarteaucitron.css file will be loaded */
+
+                    //"cookieDomain": ".my-multisite-domaine.fr" /* Shared cookie for subdomain website */
+                });
+
+                tarteaucitron.user.gtagUa = 'G-QKWQ1PVYMZ';
+                // tarteaucitron.user.gtagCrossdomain = ['example.com', 'example2.com'];
+                tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+                (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+            }
+        </script>
+        <link rel="stylesheet" href="{{ asset('tarte.css') }}">
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
