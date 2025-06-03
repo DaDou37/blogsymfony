@@ -10,4 +10,13 @@ scheb_two_factor:
         sender_name: 'toto airline'
         template: 'authentification/2fa_form.html.twig'
         # form_renderer: App\Form\TwoFactorType
+    trusted_divice:
+        enabled: true
+        lifetime: 3600
+        extend_lifetime: true
+        cookie_name: trusted_divice
+        cookie_secure: false
+        cookie_same_site: "lax"
+        cookie_domain: ".exemple.com"
+        cookie_path: "/"
 
