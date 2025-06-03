@@ -20,7 +20,14 @@ security:
             logout:
                 path: app_logout
                 # where to redirect after logout
-                # target: app_any_route
+                target: app_login
+            login_throttling:
+                max_attempts: 3
+                interval: '5 minutes'
+            two_factor:
+                auth_form_path: 2fa_login
+                chech_path: 2fa_login_check
+
 
             remember_me:
                 secret: '%kernel.secret%'
